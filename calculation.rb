@@ -1,20 +1,24 @@
 #debugging
 require 'pry'
-
+input = "";
 #operator = ['1','2','3','4'];
 
-def calculation()
+def calculation
 	string = "歡迎來到天才小計算機，請輸入兩個預計算的數字！！";
 	puts string;
 
-	begin
-		puts "請輸入第一個數字："
-		input = gets.chomp;
-		#puts !(input.to_f.is_a?(Integer));
+	#begin
+	#repeat();
+
+	if(!(input.to_f.is_a?(Float)))
+		repeat();
+	else
+		puts "您輸入的第一個數字為：" + input;
 		
 		#puts "您輸入的第一個數字為：" + input;
 		#puts input.class; #string
-	end while puts !(input.to_f.is_a?(Integer)) : (puts "您輸入的第一個數字為：" + input)
+	#end while (input.to_f.is_a?(Float))
+	
 
 	input2 = gets.chomp;
 	puts "您輸入的第二個數字為：" + input2;
