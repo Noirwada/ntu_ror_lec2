@@ -1,24 +1,24 @@
+#若要判斷是否為字串，透過轉換成ASCII去判斷!!!
+
 #debugging
 require 'pry'
-input = "";
+
 #operator = ['1','2','3','4'];
 
-def calculation
+def calculation()
 	string = "歡迎來到天才小計算機，請輸入兩個預計算的數字！！";
 	puts string;
 
-	#begin
-	#repeat();
-
-	if(!(input.to_f.is_a?(Float)))
-		repeat();
-	else
-		puts "您輸入的第一個數字為：" + input;
+	begin
+		puts "請輸入第一個數字："
+		input = gets.chomp;
+		#puts !(input.to_f.is_a?(Integer));
 		
 		#puts "您輸入的第一個數字為：" + input;
 		#puts input.class; #string
-	#end while (input.to_f.is_a?(Float))
-	
+	end while puts !(input.to_i.is_a?(Integer)) 
+
+	puts "您輸入的第一個數字為：" + input
 
 	input2 = gets.chomp;
 	puts "您輸入的第二個數字為：" + input2;
@@ -39,4 +39,3 @@ end
 
 result = calculation()
 puts result;
-
