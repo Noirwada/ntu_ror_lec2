@@ -7,9 +7,15 @@ def calculation()
 	string = "歡迎來到天才小計算機，請輸入兩個預計算的數字！！";
 	puts string;
 
-	input = gets.chomp;
-	#puts input.class; #string
-	puts "您輸入的第一個數字為：" + input;
+	begin
+		puts "請輸入第一個數字："
+		input = gets.chomp;
+		#puts !(input.to_f.is_a?(Integer));
+		
+		#puts "您輸入的第一個數字為：" + input;
+		#puts input.class; #string
+	end while puts !(input.to_f.is_a?(Integer)) : (puts "您輸入的第一個數字為：" + input)
+
 	input2 = gets.chomp;
 	puts "您輸入的第二個數字為：" + input2;
 
