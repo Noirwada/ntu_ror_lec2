@@ -4,25 +4,29 @@
 require 'pry'
 
 #operator = ['1','2','3','4'];
+def judgement(a,b)
+	puts "請輸入第一個數字："
+	input = gets.chomp;
+	puts "請輸入第二個數字："
+	input2 = gets.chomp;
+
+	#num or not
+	#transfer to ASCII
+	if(65<a.ord<123)
+		puts "a is alphabet, input nummbers please!!";
+		judgement();
+	
+	else
+		if(65<b.ord<123)
+			puts "b is alphabet, input nummbers please!!";
+			judgement();
+		else
+			#if it's all num, calculate!
+			puts "您輸入的第一個數字為："+a+"  第二個數字為："+b;
+			calculation();
+end
 
 def calculation()
-	string = "歡迎來到天才小計算機，請輸入兩個預計算的數字！！";
-	puts string;
-
-	begin
-		puts "請輸入第一個數字："
-		input = gets.chomp;
-		#puts !(input.to_f.is_a?(Integer));
-		
-		#puts "您輸入的第一個數字為：" + input;
-		#puts input.class; #string
-	end while puts !(input.to_i.is_a?(Integer)) 
-
-	puts "您輸入的第一個數字為：" + input
-
-	input2 = gets.chomp;
-	puts "您輸入的第二個數字為：" + input2;
-
 	input = input.to_f;
 	input2 = input2.to_f;
 
@@ -36,6 +40,15 @@ def calculation()
 	end
 end
 
+#main 
+string = "歡迎來到天才小計算機，請輸入兩個預計算的數字！！";
+puts string;
+puts "請輸入第一個數字："
+input = gets.chomp;
+puts "請輸入第二個數字："
+input2 = gets.chomp;
 
-result = calculation()
+#judge by func
+result = judgement(input, input2);
+
 puts result;
